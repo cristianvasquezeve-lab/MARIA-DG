@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARIA DG </title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons (WhatsApp, etc) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Configuración personalizada de Tailwind y estilos base -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.4);
+        }
+        .category-btn.active {
+            background-color: #2563eb; /* bg-blue-600 */
+            color: white;
+        }
+    </style>
+</head>
+<body class="text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            DG
+                        </div>
+                        <span class="font-bold text-2xl text-slate-800 tracking-tight">Catálogo MARIA DG <span class="text-blue-600"></span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">La Empresa</a>
+                    <a href="#catalogo" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Catálogo de Productos</a>
+                    <a href="#contacto" class="bg-blue-600 text-white px-5 py-2.5 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-md">Contacto</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-slate-500 hover:text-slate-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md">La Empresa</a>
+                <a href="#catalogo" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md">Catálogo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-blue-600 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" id="patternId" width="100%" height="100%"><defs><pattern id="a" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="scale(3) rotate(0)"><rect x="0" y="0" width="100%" height="100%" fill="hsla(0, 0%, 100%, 0)"/><path d="M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z"  stroke-width="0.5" stroke="hsla(210, 14%, 89%, 1)" fill="none"/></pattern></defs><rect width="100%" height="100%" transform="translate(0,0)" fill="url(#a)"/></svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-32 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    La mejor calidad en <br/><span class="text-blue-200">Productos CPP</span>
+                </h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-xl mx-auto md:mx-0">
+                    Descubre nuestro amplio catálogo de soluciones. Calidad, durabilidad y confianza para todas tus necesidades con atención personalizada.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#catalogo" class="bg-white text-blue-600 px-8 py-3.5 rounded-full font-bold text-lg hover:bg-slate-100 transition shadow-lg text-center">
+                        Ver Catálogo Completo
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Imagen+Destacada+CPP" alt="Productos CPP Destacados" class="rounded-2xl shadow-2xl transform md:rotate-2 hover:rotate-0 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección La Empresa (Datos de la Empresa) -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Sobre Nuestra Empresa</h2>
+                <div class="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-700">Somos especialistas en soluciones CPP</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Con más de 10 años de experiencia en el mercado, nos dedicamos a la distribución y venta de productos CPP de la más alta calidad. Nuestro compromiso es brindar soluciones eficientes y duraderas para nuestros clientes corporativos y particulares.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <i class="fas fa-bullseye text-3xl text-blue-600 mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">Misión</h4>
+                            <p class="text-slate-600 text-sm">Proveer productos de excelencia que superen las expectativas de calidad y seguridad de nuestros clientes.</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <i class="fas fa-eye text-3xl text-blue-600 mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">Visión</h4>
+                            <p class="text-slate-600 text-sm">Ser la empresa líder a nivel nacional en la distribución y asesoría técnica de productos de la línea CPP.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://placehold.co/300x400/e2e8f0/475569?text=Instalaciones" alt="Nuestras Instalaciones" class="rounded-xl shadow-md w-full h-full object-cover">
+                        <div class="grid grid-rows-2 gap-4">
+                            <img src="https://placehold.co/300x190/cbd5e1/334155?text=Equipo" alt="Nuestro Equipo" class="rounded-xl shadow-md w-full h-full object-cover">
+                            <img src="https://placehold.co/300x190/94a3b8/1e293b?text=Logistica" alt="Logística" class="rounded-xl shadow-md w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Catálogo de Productos -->
+    <section id="catalogo" class="py-20 bg-slate-50 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Catálogo de Productos</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Explora nuestra variedad de líneas. Haz clic en el producto de tu interés para consultar precios al instante vía WhatsApp.</p>
+            </div>
+
+            <!-- Filtros de Categorías -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-filters">
+                <button onclick="filterProducts('todos')" class="category-btn active px-6 py-2.5 rounded-full font-medium text-sm md:text-base border border-slate-300 text-slate-700 bg-white hover:bg-slate-100 transition-colors shadow-sm">Todos</button>
+                <button onclick="filterProducts('industrial')" class="category-btn px-6 py-2.5 rounded-full font-medium text-sm md:text-base border border-slate-300 text-slate-700 bg-white hover:bg-slate-100 transition-colors shadow-sm">Línea Industrial</button>
+                <button onclick="filterProducts('comercial')" class="category-btn px-6 py-2.5 rounded-full font-medium text-sm md:text-base border border-slate-300 text-slate-700 bg-white hover:bg-slate-100 transition-colors shadow-sm">Línea Comercial</button>
+                <button onclick="filterProducts('accesorios')" class="category-btn px-6 py-2.5 rounded-full font-medium text-sm md:text-base border border-slate-300 text-slate-700 bg-white hover:bg-slate-100 transition-colors shadow-sm">Accesorios</button>
+            </div>
+
+            <!-- Grilla de Productos -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Los productos se inyectarán aquí mediante JavaScript -->
+            </div>
+            
+            <!-- Mensaje cuando no hay resultados -->
+            <div id="no-results" class="hidden text-center py-10">
+                <p class="text-slate-500 text-lg">No se encontraron productos en esta categoría.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-slate-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold shadow-lg">C</div>
+                        <span class="font-bold text-xl tracking-tight">Catálogo<span class="text-blue-400">CPP</span></span>
+                    </div>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Soluciones integrales y productos de alta calidad para cubrir las necesidades de su proyecto o negocio. Contáctenos hoy mismo.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Enlaces Rápidos -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 border-b border-slate-700 pb-2">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-blue-500"></i> Inicio</a></li>
+                        <li><a href="#nosotros" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-blue-500"></i> La Empresa</a></li>
+                        <li><a href="#catalogo" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-blue-500"></i> Catálogo</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contacto -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 border-b border-slate-700 pb-2">Contacto Directo</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1"></i>
+                            <span class="text-slate-400">Av. Principal 1234, Distrito Empresarial, Lima, Perú.</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt text-blue-500"></i>
+                            <span class="text-slate-400">+51 (01) 555-1234</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <span class="text-slate-400">ventas@catalogocpp.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
+                <p>&copy; 2026 Catálogo CPP. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0">Diseñado con <i class="fas fa-heart text-red-500 mx-1"></i> para un servicio de calidad</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // CONFIGURACIÓN DE NÚMERO DE WHATSAPP (Asegúrate de incluir el código de país sin el +)
+        const NUMERO_WHATSAPP = "51927371883"; 
+
+        // Base de Datos de Productos (Fácilmente editable)
+        const baseProductos = [
+            {
+                id: 1,
+                nombre: "CPP Industrial Pro Mod. Alpha",
+                categoria: "industrial",
+                imagen: "https://placehold.co/400x300/334155/ffffff?text=CPP+Industrial+Alpha",
+                descripcion: "Alta resistencia y durabilidad para trabajo pesado continuo en entornos industriales."
+            },
+            {
+                id: 2,
+                nombre: "Set de Acoples CPP Estándar",
+                categoria: "accesorios",
+                imagen: "https://placehold.co/400x300/475569/ffffff?text=Acoples+Estandar",
+                descripcion: "Set de 5 piezas universales de acople rápido. Compatibilidad garantizada."
+            },
+            {
+                id: 3,
+                nombre: "Unidad CPP Comercial V2",
+                categoria: "comercial",
+                imagen: "https://placehold.co/400x300/64748b/ffffff?text=CPP+Comercial+V2",
+                descripcion: "Diseño compacto y eficiente para comercios medianos y oficinas."
+            },
+            {
+                id: 4,
+                nombre: "CPP Industrial Max T-500",
+                categoria: "industrial",
+                imagen: "https://placehold.co/400x300/334155/ffffff?text=Industrial+Max+T-500",
+                descripcion: "Máximo rendimiento y capacidad de carga. Certificación ISO 9001."
+            },
+            {
+                id: 5,
+                nombre: "Soporte de Fijación CPP",
+                categoria: "accesorios",
+                imagen: "https://placehold.co/400x300/475569/ffffff?text=Soporte+Fijacion",
+                descripcion: "Material anticorrosivo, ideal para instalaciones seguras en exteriores e interiores."
+            },
+            {
+                id: 6,
+                nombre: "CPP Lite Comercial 100",
+                categoria: "comercial",
+                imagen: "https://placehold.co/400x300/64748b/ffffff?text=CPP+Lite+100",
+                descripcion: "El modelo más vendido. Económico, práctico y fácil de instalar."
+            },
+            {
+                id: 7,
+                nombre: "Filtro Especializado CPP",
+                categoria: "accesorios",
+                imagen: "https://placehold.co/400x300/475569/ffffff?text=Filtro+Especializado",
+                descripcion: "Mantiene la vida útil de su equipo principal. Recambio recomendado anual."
+            },
+            {
+                id: 8,
+                nombre: "Sistema Integral Industrial CPP-X",
+                categoria: "industrial",
+                imagen: "https://placehold.co/400x300/334155/ffffff?text=Sistema+Integral+X",
+                descripcion: "La solución completa. Incluye módulo principal, acoples y panel de control."
+            }
+        ];
+
+        // Función para renderizar tarjetas de productos
+        function renderProductos(productos) {
+            const grid = document.getElementById('products-grid');
+            const noResults = document.getElementById('no-results');
+            
+            grid.innerHTML = ''; // Limpiar grilla
+            
+            if (productos.length === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                
+                productos.forEach(producto => {
+                    // Mapeo de colores para la etiqueta de categoría
+                    let badgeColor = "bg-slate-200 text-slate-700";
+                    let catLabel = "General";
+                    
+                    if(producto.categoria === 'industrial'){ badgeColor = "bg-orange-100 text-orange-700"; catLabel = "Línea Industrial"; }
+                    if(producto.categoria === 'comercial'){ badgeColor = "bg-blue-100 text-blue-700"; catLabel = "Línea Comercial"; }
+                    if(producto.categoria === 'accesorios'){ badgeColor = "bg-emerald-100 text-emerald-700"; catLabel = "Accesorios"; }
+
+                    // Crear el mensaje codificado para WhatsApp
+                    const mensajeBase = `¡Hola! Me encuentro en su página web y deseo consultar el precio y detalles del siguiente producto: *${producto.nombre}*. Quedo atento(a).`;
+                    const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensajeBase)}`;
+
+                    // Construcción del HTML de la tarjeta
+                    const cardHTML = `
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col h-full group">
+                            <!-- Imagen y Categoría Badge -->
+                            <div class="relative overflow-hidden">
+                                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 left-4 ${badgeColor} text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                                    ${catLabel}
+                                </span>
+                            </div>
+                            
+                            <!-- Contenido del Producto -->
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-slate-800 mb-2 leading-tight group-hover:text-blue-600 transition-colors">${producto.nombre}</h3>
+                                <p class="text-slate-600 text-sm mb-6 flex-grow leading-relaxed">${producto.descripcion}</p>
+                                
+                                <!-- Botón WhatsApp -->
+                                <a href="${urlWhatsApp}" target="_blank" rel="noopener noreferrer" class="whatsapp-btn w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                    <span>Consultar Precio</span>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    grid.insertAdjacentHTML('beforeend', cardHTML);
+                });
+            }
+        }
+
+        // Función para filtrar productos por categoría
+        function filterProducts(categoria) {
+            // Actualizar estado activo de los botones
+            const botones = document.querySelectorAll('.category-btn');
+            botones.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
+            
+            const btnActivado = Array.from(botones).find(btn => btn.getAttribute('onclick').includes(categoria));
+            if(btnActivado) {
+                btnActivado.classList.add('active');
+                // Remover clases por defecto y forzar estilos activos
+                btnActivado.style.backgroundColor = '#2563eb';
+                btnActivado.style.color = 'white';
+                btnActivado.style.borderColor = '#2563eb';
+            }
+            
+            // Restablecer estilos de botones inactivos
+            botones.forEach(btn => {
+                if(!btn.classList.contains('active')) {
+                    btn.style.backgroundColor = 'white';
+                    btn.style.color = '#334155';
+                    btn.style.borderColor = '#cbd5e1';
+                }
+            });
+
+            // Filtrar y renderizar
+            if (categoria === 'todos') {
+                renderProductos(baseProductos);
+            } else {
+                const productosFiltrados = baseProductos.filter(p => p.categoria === categoria);
+                renderProductos(productosFiltrados);
+            }
+        }
+
+        // Inicializar catálogo al cargar la página
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProductos(baseProductos);
+            
+            // Setear el botón "Todos" como activo visualmente al inicio
+            const btnTodos = document.querySelector('.category-btn');
+            btnTodos.style.backgroundColor = '#2563eb';
+            btnTodos.style.color = 'white';
+            btnTodos.style.borderColor = '#2563eb';
+        });
+
+    </script>
+</body>
+</html>
